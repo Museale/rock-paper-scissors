@@ -1,0 +1,17 @@
+
+
+[] It should have a function that picks 'rock' 'paper' 'scissors' at random and returns the value
+
+[] It should have a playRound function that asks for user input and plays it against the computer choice
+        [] The function should have two parameters (userSelection, computerSelection)
+        [] The function should prompt user for input
+        [] The input can only be 'rock' 'paper' 'scissors' and should be case insensitive
+        [] The function should compare userPick and computerPick and return a string declaring the winner or loser
+
+
+
+[] It should have a function that keeps score up until 5 games and declares the winner or loser
+        [] it should call the playRound() function.
+        [] if playRound function is <= 5 keep playing
+        [] it should declare the winner and/or loser along with the score when it reaches 5 games
+
