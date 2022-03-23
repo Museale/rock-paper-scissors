@@ -1,6 +1,6 @@
 
 
-[] It should have a function that picks 'rock' 'paper' 'scissors' at random and returns the value
+[x] It should have a function that picks 'rock' 'paper' 'scissors' at random and returns the value
 
 [] It should have a playRound function that asks for user input and plays it against the computer choice
         [] The function should have two parameters (userSelection, computerSelection)
