@@ -28,7 +28,7 @@ function playRound (userSelection, computerSelection) {
      
      if (userSelection === null || userSelection === '') {
          alert('You can\'t beat the computer with that attitude. Input rock, paper or scissors!') 
-     }  if(userSelection.match(regex)) {
+     } else if(userSelection.match(regex)) {
             if (computerSelection === 'rock' && userSelection.match(paperEx)) {
              
                 console.log('Computer picked:', computerSelection, 'You picked:', userSelection);
@@ -77,18 +77,18 @@ function playRound (userSelection, computerSelection) {
 
         function game() {
             
-            for(let i = 0; i <= 5; i++) {
-                if (i <= 5){ 
+            for(let i = 0; i <= 10; i++) {
+                if (i <= 10){ 
                     console.log(computerScore, userScore);
                     playRound()
-                     if (i === 5 && userScore > computerScore) {
+                     if (userScore === 5) {
                          console.log('You win', computerScore, userScore)
                         return 'You have won';
 
-                    } else if (i === 5 && computerScore > userScore) {
+                    } else if (computerScore === 5) {
                          console.log('Computer wins', computerScore, userScore)
                          return 'You have lost';
-                   } else if (i === 5 && computerScore === userScore) {
+                   } else if (i === 10 && computerScore === userScore) {
                        console.log('There will be no winners today', computerScore, userScore);
                    }
                 
