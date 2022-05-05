@@ -19,7 +19,10 @@ const display = document.getElementById('display');
     lastChoice.textContent = 'You picked: - - - - Computer picked: - - - -';
 
     const winner = document.createElement('p');
-    winner.textContent = 'Whomst\'vbeen winning?!';
+    winner.textContent = 'Who will win?';
+    
+    const rules = document.createElement('p');
+    rules.textContent = "The rules are as follows: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.";
 
 function computerPlay() {
     const rockPaperScissors  = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
@@ -32,31 +35,39 @@ let userScore = 0;
 let computerScore = 0;
 
 function playRound(user, computer) {
-  
-    console.log('user', user, 'computer', computer)
+
+
+    if (user === computer) {
+        console.log('DRAW')
+        score.textContent = 'Current Score: ' + ' User: ' + userScore + ' Computer: ' + computerScore;
+        lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
+        return 'DRAW';
+    };
+
     switch(true) {
-        case user === 'ROCK': 
-        computer === 'PAPER' || 'SPOCK' ? computerScore++ : userScore++;
+        case user == 'ROCK': 
+        computer == 'PAPER' || computer == 'SPOCK' ? computerScore++ : userScore++;
         break;
-        case user === 'PAPER': 
-        computer === 'SPOCK' || 'LIZARD' ? computerScore++ : userScore++;
+        case user == 'PAPER': 
+        computer == 'SCISSORS' || computer ==  'LIZARD' ? computerScore++ : userScore++;
         break;
-        case user === 'SCISSORS': 
-        computer === 'ROCK' || 'ROCK' ? computerScore++ : userScore++;
+        case user == 'SCISSORS': 
+        computer == 'ROCK' || computer ==  'ROCK' ? computerScore++ : userScore++;
         break;
-        case user === 'LIZARD': 
-        computer === 'SCISSORS' || 'ROCK' ? computerScore++ : userScore++;
+        case user == 'LIZARD': 
+        computer == 'SCISSORS' || computer ==  'ROCK' ? computerScore++ : userScore++;
         break;
-        case user === 'SPOCK':
-        computer === 'LIZARD' || 'PAPER' ? computerScore++ : userScore++;
+        case user == 'SPOCK':
+        computer == 'LIZARD' || computer == 'PAPER' ? computerScore++ : userScore++;
         break;
-        default: 
-        'DRAW';
     }
+
     score.textContent = 'Current Score: ' + ' User: ' + userScore + ' Computer: ' + computerScore;
+    
     lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
+
     console.log(userScore, computerScore)
-    return userScore, computerScore;
+    
     
 };
 
@@ -64,3 +75,4 @@ function playRound(user, computer) {
     display.appendChild(score);
     display.appendChild(lastChoice);
     display.appendChild(winner);
+    display.appendChild(rules);
