@@ -4,9 +4,11 @@ const div = document.getElementById('div');
         Array.from(btn).forEach(item => {
             item.addEventListener('click', (e) => {
                 let userSelection = e.target.textContent;
+                if (userScore < 5 && computerScore < 5) {
                 playRound(userSelection, computerPlay());
                 console.log('You ' + userSelection);
-                return userSelection; 
+                }
+                return userSelection;
             });
         });
 
@@ -25,8 +27,8 @@ const display = document.getElementById('display');
     winner.textContent = 'Who will win?';
 
     const draw = document.createElement('p');
-    
-    
+
+
 const rules = document.getElementById('rules');
 
     const rulesDescription = document.createElement('p');
@@ -41,8 +43,6 @@ function computerPlay() {
 }
 
 function playRound(user, computer) {
-    
-    game();
 
     if (user === computer) {
         console.log('DRAW');
@@ -55,16 +55,16 @@ function playRound(user, computer) {
     draw.textContent = '';
 
     switch(true) {
-        case user == 'ROCK': 
+        case user == 'ROCK':
         computer == 'PAPER' || computer == 'SPOCK' ? computerScore++ : userScore++;
         break;
-        case user == 'PAPER': 
+        case user == 'PAPER':
         computer == 'SCISSORS' || computer ==  'LIZARD' ? computerScore++ : userScore++;
         break;
-        case user == 'SCISSORS': 
+        case user == 'SCISSORS':
         computer == 'ROCK' || computer ==  'ROCK' ? computerScore++ : userScore++;
         break;
-        case user == 'LIZARD': 
+        case user == 'LIZARD':
         computer == 'SCISSORS' || computer ==  'ROCK' ? computerScore++ : userScore++;
         break;
         case user == 'SPOCK':
@@ -72,32 +72,23 @@ function playRound(user, computer) {
         break;
     }
 
+
     score.textContent = 'Current Score: ' + ' User: ' + userScore + ' Computer: ' + computerScore;
-    
+
     lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
 
     console.log(userScore, computerScore)
-    
-    
-};
-
-function game() {
 
     if (userScore == 5 || computerScore == 5) {
         if (userScore > computerScore) {
-            winner.textContent = 'GAME OVER! YOU WIN.';
+            return winner.textContent = 'GAME OVER! YOU WIN.';
 
-        } else if (computerScore > userScore) {    
-            winner.textContent = 'GAME OVER! COMPUTER WINS.';
-            
-        }; 
-        userScore = 0;
-        computerScore = 0;
-        
-        return userScore, computerScore;
-    }
+        } else if (computerScore > userScore) {
+            return winner.textContent = 'GAME OVER! COMPUTER WINS.';
 
-   
+        }
+};
+
 
     winner.textContent = "Who will win?";
 };

@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(236, 217, 192);
+    margin: 5%;
+}
+
+#container {
+    border: 5px solid rgb(50, 155, 141)
+    ;
+    background-color: rgb(113, 182, 173);
+    padding: 3em;
+}
+
+#div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+    padding: 3em;
+    border: solid 4px rgb(50, 155, 141);
+    background-color: aquamarine;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    padding: 8%;
+    font-size: 0.7rem;
+    background-color: rgb(50, 155, 141);
+    border: dashed 2px aquamarine;
+    color: rgb(89, 212, 196);
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: rgb(89, 230, 211);
+    box-shadow: 5px 5px 55px rgb(70, 187, 171);
+}
+
+#display {
+    text-align: center;
+    padding: 5em;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#rules {
+   text-align: center;
+   padding: 10px;
+   font-family: 'PressStart2PRegular';
+   font-weight: normal;
+   font-style: normal;
+   line-height: 2em;
+
+}
+
