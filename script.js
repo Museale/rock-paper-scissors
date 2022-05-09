@@ -10,6 +10,9 @@ const div = document.getElementById('div');
             });
         });
 
+let userScore = 0;
+let computerScore = 0;
+
 const display = document.getElementById('display');
 
     const score = document.createElement('p');
@@ -20,9 +23,15 @@ const display = document.getElementById('display');
 
     const winner = document.createElement('p');
     winner.textContent = 'Who will win?';
+
+    const draw = document.createElement('p');
     
-    const rules = document.createElement('p');
-    rules.textContent = "The rules are as follows: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.";
+    
+const rules = document.getElementById('rules');
+
+    const rulesDescription = document.createElement('p');
+    rulesDescription.textContent = "The rules are as follows: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.";
+
 
 function computerPlay() {
     const rockPaperScissors  = ['ROCK', 'PAPER', 'SCISSORS', 'LIZARD', 'SPOCK'];
@@ -31,18 +40,19 @@ function computerPlay() {
     return computerSelection;
 }
 
-let userScore = 0;
-let computerScore = 0;
-
 function playRound(user, computer) {
-
+    
+    game();
 
     if (user === computer) {
-        console.log('DRAW')
+        console.log('DRAW');
+        draw.textContent = 'DRAW!';
         score.textContent = 'Current Score: ' + ' User: ' + userScore + ' Computer: ' + computerScore;
         lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
         return 'DRAW';
     };
+
+    draw.textContent = '';
 
     switch(true) {
         case user == 'ROCK': 
@@ -71,8 +81,29 @@ function playRound(user, computer) {
     
 };
 
+function game() {
 
-    display.appendChild(score);
-    display.appendChild(lastChoice);
+    if (userScore == 5 || computerScore == 5) {
+        if (userScore > computerScore) {
+            winner.textContent = 'GAME OVER! YOU WIN.';
+
+        } else if (computerScore > userScore) {    
+            winner.textContent = 'GAME OVER! COMPUTER WINS.';
+            
+        }; 
+        userScore = 0;
+        computerScore = 0;
+        
+        return userScore, computerScore;
+    }
+
+   
+
+    winner.textContent = "Who will win?";
+};
+
     display.appendChild(winner);
-    display.appendChild(rules);
+    display.appendChild(score);
+    display.appendChild(draw);
+    display.appendChild(lastChoice);
+    rules.appendChild(rulesDescription);
