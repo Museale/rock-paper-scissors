@@ -25,6 +25,7 @@ body {
     border-radius: 25px;
     border-end-end-radius: 65px;
     border-end-start-radius: 55px;
+    border-start-end-radius: 35px;
     gap: 2em;
     margin: 2em;
     max-width: 360px;
@@ -42,7 +43,7 @@ body {
     gap: 1rem;
 }
 
-button {
+.btn {
     display: flex;
     flex-direction: row;
     flex-shrink: 1;
@@ -62,7 +63,7 @@ button {
     margin-top: auto;
 }
 
-button:hover {
+.btn:hover {
     background-color: rgb(62, 88, 136);
     box-shadow: -2px -3px rgb(44, 51, 49); 
     font-size: 0.68rem;
@@ -105,12 +106,51 @@ button:hover {
 
 #rules {
     display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
+    margin-top: 50px;
+    align-items: center;
     font-size: 0.7em;
+    gap: 1em;
+ 
 }
 
+.rulesDescription {
+    display: flex;
+    height: auto;
+    width: fit-content;
+    margin: 35px;
+    border-radius: 5px;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.8em;
+    padding: 1em;
+    background-color: rgb(106, 202, 209);
+    box-shadow: 5px 6px 5px 5px rgb(0, 0, 0);
+}
 
 .gameOver {
     font-weight: bold;
 
 }
+
+.reloadBtn {
+   background-color: rgb(87, 12, 12);
+   font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 0.9em;
+    padding: 0.8em;
+}
+
+.rulesBtn {
+    background-color: rgb(87, 12, 12);
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    color: whitesmoke;
+    font-size: 0.9em;
+    padding: 0.8em;
+}
+

@@ -30,9 +30,17 @@ const display = document.getElementById('display');
     const draw = document.createElement('p');
   
 const rules = document.getElementById('rules');
+ 
+    const rulesBtn = document.createElement('button');
+    rulesBtn.textContent = 'RULES';
+    rulesBtn.classList.add('rulesBtn');
+    rulesBtn.addEventListener('click', () => {
+        document.getElementById('rulesDescription');
+        rulesDescription.appendChild(rulesDescriptionP);
+    });
 
-    const rulesDescription = document.createElement('p');
-    rulesDescription.textContent = "The rules are as follows: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.";
+    const rulesDescriptionP = document.createElement('p');
+    rulesDescriptionP.classList.add('rulesDescription');    rulesDescriptionP.textContent = "The rules are as follows: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.";
 
 
 function computerPlay() {
@@ -82,7 +90,10 @@ function playRound(user, computer) {
     if (userScore == 5 || computerScore == 5) {
         if (userScore > computerScore) {
             winner.classList.add('gameOver');
+
             return winner.textContent = 'GAME OVER! YOU WIN.';
+            
+
 
         } else if (computerScore > userScore) {
             winner.classList.add('gameOver');
@@ -92,10 +103,21 @@ function playRound(user, computer) {
 };
 
 
-    winner.textContent = "Who will win?";
+    winner.textContent = 'Who will win?';
 };
-    rules.appendChild(rulesDescription);
-    display.appendChild(winner);
-    display.appendChild(score);
-    display.appendChild(lastChoice);
-    rules.appendChild(rulesDescription);
+
+   
+const reloadButton = document.createElement('button');
+reloadButton.textContent = 'NEW GAME';
+reloadButton.classList.add('reloadBtn');
+reloadButton.addEventListener("click", () => {
+    location.reload();
+});
+
+
+display.appendChild(winner);
+display.appendChild(score);
+display.appendChild(lastChoice);
+rules.appendChild(rulesBtn);
+rules.appendChild(reloadButton);
+
