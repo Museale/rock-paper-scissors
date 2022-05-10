@@ -5,7 +5,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: rgb(44, 51, 49);
+    background-color: rgb(170, 190, 114);
     width: 100%;
     height: auto;
     margin: 0;
@@ -17,10 +17,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border-right: 18px solid rgb(6, 77, 67);
-    border-bottom: 20px solid rgb(13, 88, 78);
-    border-left: 5px solid rgb(13, 88, 78);;
-    background-color: rgb(38, 117, 107);
+    border-right: 18px solid rgb(7, 95, 83);
+    border-bottom: 20px solid rgb(13, 102, 90);
+    border-left: 5px solid rgb(19, 122, 109);;
+    background-color: rgb(51, 139, 128);
     padding: 3em;
     border-radius: 25px;
     border-end-end-radius: 65px;
@@ -53,19 +53,19 @@ body {
     max-height: 6rem;
     padding: 8%;
     font-size: 0.7rem;
-    background-color: rgb(62, 88, 136);
+    background-color: rgb(52, 96, 146);
     border-radius: 4px;
-    box-shadow: 2px 5px rgb(44, 51, 49);
-    color: rgb(89, 212, 196);
+    box-shadow: 2px 5px 1px rgb(55, 60, 88);
+    color: rgb(218, 146, 12);
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
     margin-top: auto;
-}
+} 
 
 .btn:hover {
     background-color: rgb(62, 88, 136);
-    box-shadow: -2px -3px rgb(44, 51, 49); 
+    box-shadow: -2px -2px rgb(55, 60, 88); 
     font-size: 0.68rem;
 
 }
@@ -140,7 +140,7 @@ body {
    font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
-    color: whitesmoke;
+    color: rgb(218, 146, 12);
     font-size: 0.9em;
     padding: 0.8em;
 }
@@ -150,7 +150,7 @@ body {
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
-    color: whitesmoke;
+    color: rgb(218, 146, 12);
     font-size: 0.9em;
     padding: 0.8em;
 }
