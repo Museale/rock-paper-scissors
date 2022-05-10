@@ -127,6 +127,7 @@ body {
     padding: 1em;
     background-color: rgb(106, 202, 209);
     box-shadow: 5px 6px 5px 5px rgb(0, 0, 0);
+    line-height: 1.3em;
 }
 
 .gameOver {
