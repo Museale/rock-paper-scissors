@@ -1,67 +1,116 @@
 body {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(236, 217, 192);
-    margin: 5%;
+    align-items: center;
+    background-color: rgb(44, 51, 49);
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
 
 #container {
-    border: 5px solid rgb(50, 155, 141)
-    ;
-    background-color: rgb(113, 182, 173);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-right: 18px solid rgb(6, 77, 67);
+    border-bottom: 20px solid rgb(13, 88, 78);
+    border-left: 5px solid rgb(13, 88, 78);;
+    background-color: rgb(38, 117, 107);
     padding: 3em;
+    border-radius: 25px;
+    border-end-end-radius: 65px;
+    border-end-start-radius: 55px;
+    gap: 2em;
+    margin: 2em;
+    max-width: 360px;
+    max-height: auto;
+    box-shadow: 33px 24px 40px 1px rgb(0, 0, 0);
+
+ 
 }
+
 
 #div {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
-    justify-content: space-around;
-    padding: 3em;
-    border: solid 4px rgb(50, 155, 141);
-    background-color: aquamarine;
+    justify-content: center;
+    gap: 1rem;
 }
 
 button {
     display: flex;
     flex-direction: row;
+    flex-shrink: 1;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 6rem;
+    max-width: 6rem;
+    max-height: 6rem;
     padding: 8%;
     font-size: 0.7rem;
-    background-color: rgb(50, 155, 141);
-    border: dashed 2px aquamarine;
+    background-color: rgb(62, 88, 136);
+    border-radius: 4px;
+    box-shadow: 2px 5px rgb(44, 51, 49);
     color: rgb(89, 212, 196);
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
+    margin-top: auto;
 }
 
 button:hover {
-    background-color: rgb(89, 230, 211);
-    box-shadow: 5px 5px 55px rgb(70, 187, 171);
+    background-color: rgb(62, 88, 136);
+    box-shadow: -2px -3px rgb(44, 51, 49); 
+    font-size: 0.68rem;
+
+}
+
+
+#screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 3px rgb(13, 88, 78);
+    border-left: solid 5px rgb(13, 88, 78);
+    border-top: solid 4px rgb(13, 88, 78);
+    border-radius: 8px;
+    background: aquamarine;
+    background: linear-gradient(75deg, rgb(63, 229, 251) 0%, rgb(183, 232, 235) 30%, rgb(154, 202, 224) 66%, rgb(70, 150, 196) 90%);
+    max-width: 400px;
+    line-height: 1em;
+    box-shadow: -1px 0px 25px 15px rgb(71, 189, 183);
+   
 }
 
 #display {
-    text-align: center;
-    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 2rem;
+    gap: 1.5em;
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
+    font-size: 0.7em;
+    
+
 }
 
 
 #rules {
-   text-align: center;
-   padding: 10px;
-   font-family: 'PressStart2PRegular';
-   font-weight: normal;
-   font-style: normal;
-   line-height: 2em;
-
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.7em;
 }
 
+
+.gameOver {
+    font-weight: bold;
+
+}
