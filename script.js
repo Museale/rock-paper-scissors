@@ -22,10 +22,11 @@ const display = document.getElementById('display');
     score.textContent = 'User: 0 ' + ' Computer: 0';
 
     const lastChoice = document.createElement('p');
-    lastChoice.textContent = 'You picked: - - -  Computer picked: - - - ';
+    
+    lastChoice.textContent = ' You picked: - - -' + ' Computer picked: - - - ';
 
     const winner = document.createElement('p');
-    winner.textContent = 'Who will win?';
+    winner.textContent = '- - -';
 
     const draw = document.createElement('p');
   
@@ -37,6 +38,21 @@ const rules = document.getElementById('rules');
     rulesBtn.addEventListener('click', () => {
         document.getElementById('rulesDescription');
         rulesDescription.appendChild(rulesDescriptionP);
+        rulesBtn.style.display = "none";
+        rulesAwayBtn.style.visibility ="visible";
+        rulesDescriptionP.style.visibility ="visible";
+        
+    });
+
+    const rulesAwayBtn = document.createElement('button');
+    rulesAwayBtn.textContent = 'RULES';
+    rulesAwayBtn.style.visibility ="hidden";
+    rulesAwayBtn.classList.add('rulesBtn');
+    rulesAwayBtn.addEventListener('click', () => {
+        rulesDescriptionP.style.visibility = "hidden";
+        rulesAwayBtn.style.visibility ="hidden";
+        rulesBtn.style.display = "flex";
+
     });
 
     const rulesDescriptionP = document.createElement('p');
@@ -103,7 +119,7 @@ function playRound(user, computer) {
 };
 
 
-    winner.textContent = 'Who will win?';
+    winner.textContent = '- - -';
 };
 
    
@@ -118,6 +134,7 @@ reloadButton.addEventListener("click", () => {
 display.appendChild(winner);
 display.appendChild(score);
 display.appendChild(lastChoice);
+rules.appendChild(rulesAwayBtn);
 rules.appendChild(rulesBtn);
 rules.appendChild(reloadButton);
 
