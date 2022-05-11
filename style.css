@@ -86,7 +86,7 @@ body {
     background: aquamarine;
     background: linear-gradient(75deg, rgb(63, 229, 251) 0%, rgb(183, 232, 235) 30%, rgb(154, 202, 224) 66%, rgb(70, 150, 196) 90%);
     max-width: 400px;
-    min-width: 350px;
+    min-width: 355px;
     line-height: 1em;
     box-shadow: -1px 0px 25px 15px rgb(71, 189, 183);
    
