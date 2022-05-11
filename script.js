@@ -23,7 +23,10 @@ const display = document.getElementById('display');
 
     const lastChoice = document.createElement('p');
     
-    lastChoice.textContent = ' You picked: - - -' + ' Computer picked: - - - ';
+    lastChoice.textContent = ' You picked: - - - \r\n Computer picked: - - - ';
+    lastChoice.setAttribute('style', 'white-space: pre');
+    lastChoice.classList.add('lastChoice');
+
 
     const winner = document.createElement('p');
     winner.textContent = '- - -';
@@ -72,7 +75,7 @@ function playRound(user, computer) {
         console.log('DRAW');
         winner.textContent = 'DRAW!';
         score.textContent = 'User: ' + userScore + ' Computer: ' + computerScore;
-        lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
+        lastChoice.textContent = 'You picked: ' + user + '\r\nComputer picked: ' + computer;
         return 'DRAW';
     };
 
@@ -99,7 +102,7 @@ function playRound(user, computer) {
 
     score.textContent = 'User: ' + userScore + ' Computer: ' + computerScore;
 
-    lastChoice.textContent = 'You picked: ' + user + ' Computer picked: ' + computer;
+    lastChoice.textContent = 'You picked: ' + user + '\r\nComputer picked: ' + computer;
 
     console.log(userScore, computerScore)
 
